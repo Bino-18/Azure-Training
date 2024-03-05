@@ -1,0 +1,9 @@
+{
+	"name": "24DEMO",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "70bf8d45-09b6-4f1c-8b7b-ba06d0350c47",
+		"tenantId": "fd44777e-c8a8-4b19-839f-bbeaf674f06d"
+	}
+}
