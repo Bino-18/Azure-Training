@@ -15,7 +15,7 @@
 			"sinks": [
 				{
 					"dataset": {
-						"referenceName": "Project1_raw",
+						"referenceName": "AzureSqlTable4",
 						"type": "DatasetReference"
 					},
 					"name": "sink1"
@@ -50,20 +50,19 @@
 				"aggregate1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
-				"          {Order ID} as string,",
-				"          {Customer Name} as string,",
 				"          Category as string,",
-				"          {Sub Category} as string,",
-				"          City as string,",
-				"          {Order Date} as string,",
-				"          Region as string,",
-				"          Sales as string,",
-				"          Discount as string,",
-				"          Profit as string,",
-				"          State as string",
+				"          SubCategory as string,",
+				"          sum_of_Sales as decimal(10,2),",
+				"          sum_of_Profit as decimal(10,2)",
 				"     ),",
+				"     deletable:false,",
+				"     insertable:true,",
+				"     updateable:false,",
+				"     upsertable:false,",
+				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"     skipDuplicateMapOutputs: true,",
+				"     errorHandlingOption: 'stopOnFirstError') ~> sink1"
 			]
 		}
 	}
