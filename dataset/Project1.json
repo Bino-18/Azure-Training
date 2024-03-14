@@ -1,0 +1,23 @@
+{
+	"name": "Project1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorageproject1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "blinketgrocery.csv",
+				"container": "containerproject1"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
