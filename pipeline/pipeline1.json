@@ -195,8 +195,8 @@
 				]
 			},
 			{
-				"name": "Lookup1",
-				"type": "Lookup",
+				"name": "dataflow1",
+				"type": "ExecuteDataFlow",
 				"dependsOn": [
 					{
 						"activity": "str tosqldb",
@@ -214,17 +214,15 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"source": {
-						"type": "AzureSqlSource",
-						"sqlReaderQuery": "SELECT TOP (1000) * FROM [dbo].[Orders3]",
-						"queryTimeout": "02:00:00",
-						"partitionOption": "None"
+					"dataflow": {
+						"referenceName": "dataflow1",
+						"type": "DataFlowReference"
 					},
-					"dataset": {
-						"referenceName": "AzureSqlTable3",
-						"type": "DatasetReference"
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
 					},
-					"firstRowOnly": false
+					"traceLevel": "Fine"
 				}
 			}
 		],
