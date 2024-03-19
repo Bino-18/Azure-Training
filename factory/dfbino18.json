@@ -1,0 +1,9 @@
+{
+	"name": "dfbino18",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "94d9df44-706f-4ba0-87c8-26b5840de4a2",
+		"tenantId": "aa779035-5fe2-4f12-b644-60dcc2f4b682"
+	}
+}
